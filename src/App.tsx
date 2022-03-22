@@ -4,10 +4,12 @@ import './App.css';
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 
+const tabs = ["Dailies", "Weeklies", "Monthlies", "Favourites"]
+
 function App() {
   return (
     <>
-      <Header tabs={["Test"]} user={{name: "test", image: ""}}/>
+      <Header tabs={tabs} user={{name: "test", image: ""}}/>
     </>
   );
 }
