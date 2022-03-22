@@ -19,7 +19,7 @@ function App() {
   if(signInCheckResult.signedIn !== true) {
     return(
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider theme={{ colorScheme }}>
+        <MantineProvider theme={{ colorScheme }} withGlobalStyles>
           <Home />
         </MantineProvider>
       </ColorSchemeProvider>
@@ -28,7 +28,7 @@ function App() {
   else {
     return (
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider theme={{ colorScheme }}>
+        <MantineProvider theme={{ colorScheme }} withGlobalStyles>
           <Login />
         </MantineProvider>
       </ColorSchemeProvider>
