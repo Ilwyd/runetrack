@@ -11,6 +11,7 @@ import { useBooleanToggle } from '@mantine/hooks';
 import {
   Logout
 } from 'tabler-icons-react/';
+import { getAuth, signOut } from 'firebase/auth';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -58,6 +59,7 @@ interface HeaderTabs {
 
 export default function Header({ tabs }: HeaderTabs) {
   const { classes, theme, cx } = useStyles();
+  const auth = getAuth();
 
   const items = tabs.map((tab) => <Tabs.Tab label={tab} key={tab} />);
 
@@ -72,7 +74,14 @@ export default function Header({ tabs }: HeaderTabs) {
                 height={50}
             />
 
-            <Button radius="md" variant="subtle" leftIcon={<Logout size={14} />}>
+            <Button 
+              radius="md" 
+              variant="subtle" 
+              leftIcon={<Logout size={14} />}
+              onClick={async () =>{
+                await signOut(auth);
+              }}
+            >
                 Logout
             </Button>
         </Group>
