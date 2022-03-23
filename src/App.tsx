@@ -14,7 +14,7 @@ function App() {
   var comp = <></>
 
   if (status === 'loading') {
-    <Loader />;
+    return <Loader />;
   }
 
   if(signInCheckResult.signedIn !== true) {
