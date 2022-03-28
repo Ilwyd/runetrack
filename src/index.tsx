@@ -3,15 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AuthProvider, FirebaseAppProvider } from 'reactfire';
-import firebaseConfig from './firebaseConfig';
-import FirebaseSetup from './FirebaseSetup'
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-        <FirebaseSetup />
-    </FirebaseAppProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
