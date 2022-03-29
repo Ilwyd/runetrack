@@ -49,9 +49,10 @@ const useStyles = createStyles((theme) => ({
 
 interface HeaderTabs {
   tabs: string[];
+  tabChange: any;
 }
 
-export default function Header({ tabs }: HeaderTabs) {
+export default function Header({ tabs, tabChange }: HeaderTabs) {
   const { classes, theme, cx } = useStyles();
 
   const items = tabs.map((tab) => <Tabs.Tab label={tab} key={tab} />);
