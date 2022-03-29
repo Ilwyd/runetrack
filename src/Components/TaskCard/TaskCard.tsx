@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart } from 'tabler-icons-react';
+import { Check, CircleCheck, Heart } from 'tabler-icons-react';
 import {
     Card,
     Image,
@@ -15,7 +15,6 @@ import {
 const useStyles = createStyles((theme) => ({
     card: {
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-        width: '40%'
     },
 
     section: {
@@ -28,13 +27,19 @@ const useStyles = createStyles((theme) => ({
 
     like: {
         color: theme.colors.red[6],
+        fill: theme.colors.red[6]
+    },
+
+    check: {
+        fill: theme.colors.green[6],
+        color: theme.colors.gray[9]
     },
 
     label: {
         textTransform: 'uppercase',
         fontSize: theme.fontSizes.xs,
         fontWeight: 700,
-    },
+    }
 }));
 
 interface TaskCardProps {
@@ -93,6 +98,9 @@ export function TaskCard({ image, title, description, type, badges }: TaskCardPr
                 <Button radius="md" style={{ flex: 1 }}>
                     Show details
                 </Button>
+                <ActionIcon variant="default" radius="md" size={36}>
+                    <CircleCheck size={18} className={classes.check} />
+                </ActionIcon>
                 <ActionIcon variant="default" radius="md" size={36}>
                     <Heart size={18} className={classes.like} />
                 </ActionIcon>
