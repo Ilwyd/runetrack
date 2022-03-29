@@ -1,33 +1,20 @@
-import { useState } from "react";
+import { Container } from "@mantine/core";
+import { useEffect, useState } from "react";
+import { data } from "../../tasks";
+import { TaskCard } from "../TaskCard/TaskCard";
 
 interface CardAreaProps {
     activeTab: string;
 }
 
 function CardArea({ activeTab }: CardAreaProps) {
-    const [data, setData] = useState({})
-
-    const getCardData = () => {
-        fetch('../../tasks.json', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-            .then((response) => {
-                console.log(response)
-                return response.json()
-            })
-            .then((myJson) => {
-                console.log(myJson)
-                setData(myJson)
-            })
-    }
-
     return (
-        <>
-            
-        </>
+        <Container>
+            <p>Data {activeTab}</p>
+            {data['Dailies'].map((task) => {
+                return <TaskCard image={task.image} description={task.description} title={task.name} type="Daily" />
+            })}
+        </Container>
     )
 }
 
