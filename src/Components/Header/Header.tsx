@@ -55,7 +55,7 @@ interface HeaderTabs {
 export default function Header({ tabs, tabChange }: HeaderTabs) {
   const { classes, theme, cx } = useStyles();
 
-  const items = tabs.map((tab) => <Tabs.Tab label={tab} key={tab} />);
+  const items = tabs.map((tab) => <Tabs.Tab label={tab} tabKey={tab} />);
 
   return (
     <div className={classes.header}>
@@ -71,6 +71,7 @@ export default function Header({ tabs, tabChange }: HeaderTabs) {
       </Container>
       <Container>
         <Tabs
+          onTabChange={tabChange}
           variant="outline"
           classNames={{
             root: classes.tabs,
