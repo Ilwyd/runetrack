@@ -15,6 +15,7 @@ import {
 const useStyles = createStyles((theme) => ({
     card: {
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+        width: '40%'
     },
 
     section: {
@@ -41,7 +42,7 @@ interface TaskCardProps {
     title: string;
     description: string;
     type: string;
-    badges: {
+    badges?: {
         emoji: string;
         label: string;
     }[];
@@ -51,7 +52,7 @@ export function TaskCard({ image, title, description, type, badges }: TaskCardPr
     const { classes } = useStyles();
     const theme = useMantineTheme();
 
-    const features = badges.map((badge) => (
+    const features = badges ? badges.map((badge) => (
         <Badge
             color={theme.colorScheme === 'dark' ? 'dark' : 'gray'}
             key={badge.label}
@@ -59,7 +60,7 @@ export function TaskCard({ image, title, description, type, badges }: TaskCardPr
         >
             {badge.label}
         </Badge>
-    ));
+    )) : null;
 
     return (
         <Card withBorder radius="md" p="md" className={classes.card}>
