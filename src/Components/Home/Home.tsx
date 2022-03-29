@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { Tabs } from "../../Constants/Tabs";
 import CardArea from "../CardArea/CardArea";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-const tabs = ["Dailies", "Weeklies", "Monthlies", "Favourites"]
+const tabs = Object.values(Tabs);
 
 function Home() {
-    const [activeTab, setActiveTab] = useState("Dailies")
+    const [activeTab, setActiveTab] = useState(Tabs.DAILIES)
     const tabChange = (active: number, tabKey: string) => {
-        setActiveTab(tabKey);
+        setActiveTab(tabKey as Tabs);
     }
 
     return (

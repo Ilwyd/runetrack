@@ -8,7 +8,7 @@ export const data = {
             "image": "/RuneTrackLogo.png"
         }
     ],
-    "Weeklies": {},
-    "Monthlies": {},
-    "Others": {}
+    "Weeklies": [],
+    "Monthlies": [],
+    "Others": []
 }
