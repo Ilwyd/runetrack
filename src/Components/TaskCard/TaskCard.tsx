@@ -27,12 +27,12 @@ const useStyles = createStyles((theme) => ({
 
     like: {
         color: theme.colors.red[6],
-        fill: theme.colors.red[6]
+        //fill: theme.colors.red[6]
     },
 
     check: {
-        fill: theme.colors.green[6],
-        color: theme.colors.gray[9]
+        //fill: theme.colors.green[6],
+        color: theme.colors.green[6]
     },
 
     label: {
@@ -69,9 +69,11 @@ export function TaskCard({ image, title, description, type, badges }: TaskCardPr
 
     return (
         <Card withBorder radius="md" p="md" className={classes.card}>
+            {/*
             <Card.Section>
                 <Image src={image} alt={title} height={180} />
             </Card.Section>
+            */}
 
             <Card.Section className={classes.section} mt="md">
                 <Group position="apart">
