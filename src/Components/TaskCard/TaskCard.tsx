@@ -10,6 +10,7 @@ import {
     ActionIcon,
     createStyles,
     useMantineTheme,
+    Space,
 } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -37,8 +38,14 @@ const useStyles = createStyles((theme) => ({
 
     label: {
         textTransform: 'uppercase',
-        fontSize: theme.fontSizes.xs,
+        fontSize: theme.fontSizes.sm,
         fontWeight: 700,
+    },
+
+    badgeLabel: {
+        textTransform: 'uppercase',
+        fontSize: theme.fontSizes.xs,
+        fontWeight: 700
     }
 }));
 
@@ -112,9 +119,37 @@ export function TaskCard({ image, link, title, description, type, rewards }: Tas
                 <Text mt="md" className={classes.label} color="dimmed">
                     Available rewards
                 </Text>
+                
+                {xpBadges ? 
+                    <Group>
+                        <Text className={classes.badgeLabel} color="dimmed">
+                            Experience
+                        </Text>
+                    </Group> : null 
+                }
                 <Group spacing={7} mt={5}>
                     {xpBadges}
+                </Group>
+
+                {lootBadges ? 
+                    <Group>
+                        <Text className={classes.badgeLabel} color="dimmed">
+                            Loot
+                        </Text>
+                    </Group> : null 
+                }
+                <Group spacing={7} mt={5}>
                     {lootBadges}
+                </Group>
+
+                {reputationBadges ? 
+                    <Group>
+                        <Text className={classes.badgeLabel} color="dimmed">
+                            Reputation
+                        </Text>
+                    </Group> : null 
+                }
+                <Group spacing={7} mt={5}>
                     {reputationBadges}
                 </Group>
             </Card.Section>
