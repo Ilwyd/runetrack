@@ -18,7 +18,7 @@ function CardArea({ activeTab }: CardAreaProps) {
             <Container>
                 <SimpleGrid cols={3}>
                     {data[activeTab].map((task) => {
-                        return <TaskCard image={task.image} description={task.description} title={task.name} type="Daily" />
+                        return <TaskCard link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" />
                     })}
                 </SimpleGrid>
             </Container>

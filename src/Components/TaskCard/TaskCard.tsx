@@ -14,7 +14,7 @@ import {
 
 const useStyles = createStyles((theme) => ({
     card: {
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white
     },
 
     section: {
@@ -44,6 +44,7 @@ const useStyles = createStyles((theme) => ({
 
 interface TaskCardProps {
     image: string;
+    link: string;
     title: string;
     description: string;
     type: string;
@@ -53,7 +54,7 @@ interface TaskCardProps {
     }[];
 }
 
-export function TaskCard({ image, title, description, type, badges }: TaskCardProps) {
+export function TaskCard({ image, link, title, description, type, badges }: TaskCardProps) {
     const { classes } = useStyles();
     const theme = useMantineTheme();
 
@@ -97,8 +98,8 @@ export function TaskCard({ image, title, description, type, badges }: TaskCardPr
             </Card.Section>
 
             <Group mt="xs">
-                <Button radius="md" style={{ flex: 1 }}>
-                    Show details
+                <Button onClick={() => {window.open(link, "_blank")}} radius="md" style={{ flex: 1 }}>
+                    Runescape Wiki
                 </Button>
                 <ActionIcon variant="default" radius="md" size={36}>
                     <CircleCheck size={18} className={classes.check} />
