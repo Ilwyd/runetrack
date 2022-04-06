@@ -38,7 +38,8 @@ export const data = {
             "link": "https://runescape.wiki/w/Nemi_Forest",
             "image": "",
             "rewards": {
-                "xp": ["Dungeoneering", "Farming", "Mining", "Prayer"]
+                "xp": ["Dungeoneering", "Farming", "Mining", "Prayer"],
+                "reputation": ["Goebie"]
             }
         }
     ],
