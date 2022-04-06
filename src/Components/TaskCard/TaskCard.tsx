@@ -42,31 +42,51 @@ const useStyles = createStyles((theme) => ({
     }
 }));
 
+interface Reward {
+    xp?: Array<string>;
+    loot?: Array<string>;
+    reputation?: Array<string>;
+}
+
 interface TaskCardProps {
     image: string;
     link: string;
     title: string;
     description: string;
     type: string;
-    badges?: {
-        emoji: string;
-        label: string;
-    }[];
+    rewards: Reward;
 }
 
-export function TaskCard({ image, link, title, description, type, badges }: TaskCardProps) {
+export function TaskCard({ image, link, title, description, type, rewards }: TaskCardProps) {
     const { classes } = useStyles();
     const theme = useMantineTheme();
 
-    const features = badges ? badges.map((badge) => (
+    const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
-            color={theme.colorScheme === 'dark' ? 'dark' : 'gray'}
-            key={badge.label}
-            leftSection={badge.emoji}
+        color={'green'}
+        key={value}
         >
-            {badge.label}
+            {value}
         </Badge>
-    )) : null;
+    )): null;
+
+    const lootBadges = rewards.loot ? rewards.loot.map((value) => (
+        <Badge
+        color={'yellow'}
+        key={value}
+        >
+            {value}
+        </Badge>
+    )): null;
+
+    const reputationBadges = rewards.reputation ? rewards.reputation.map((value) => (
+        <Badge
+        color={'red'}
+        key={value}
+        >
+            {value}
+        </Badge>
+    )): null;
 
     return (
         <Card withBorder radius="md" p="md" className={classes.card}>
@@ -93,7 +113,9 @@ export function TaskCard({ image, link, title, description, type, badges }: Task
                     Available rewards
                 </Text>
                 <Group spacing={7} mt={5}>
-                    {features}
+                    {xpBadges}
+                    {lootBadges}
+                    {reputationBadges}
                 </Group>
             </Card.Section>
 
