@@ -56,6 +56,7 @@ interface Reward {
 }
 
 interface TaskCardProps {
+    label: string;
     image: string;
     link: string;
     title: string;
@@ -64,12 +65,15 @@ interface TaskCardProps {
     rewards: Reward;
 }
 
-export function TaskCard({ image, link, title, description, type, rewards }: TaskCardProps) {
+export function TaskCard({ label, image, link, title, description, type, rewards }: TaskCardProps) {
     const { classes } = useStyles();
     const theme = useMantineTheme();
     const XP_REWARD_COLOR = 'green'
     const LOOT_REWARD_COLOR = 'yellow'
     const REPUTATION_REWARD_COLOR = 'red'
+
+    var favourited = false;
+    var completed = false;
 
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
