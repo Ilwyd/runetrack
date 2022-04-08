@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Check, CircleCheck, Heart } from 'tabler-icons-react';
 import {
     Card,
@@ -79,9 +79,28 @@ export function TaskCard({ label, image, link, title, description, type, rewards
     const XP_REWARD_COLOR = 'green'
     const LOOT_REWARD_COLOR = 'yellow'
     const REPUTATION_REWARD_COLOR = 'red'
+    const [completed, setCompleted] = useState(Boolean);
+    const [favourited, setFavourited] = useState(Boolean);
 
-    var favourited = false;
-    var completed = false;
+    useEffect(() => {
+        const json = localStorage.getItem(label);
+        if(json === null) {
+            const newData = JSON.stringify({
+                favourited: false,
+                completed: false
+            })
+
+            localStorage.setItem(label, newData)
+            setCompleted(false)
+            setFavourited(false)
+            return
+        }
+
+        const taskData = JSON.parse(json)
+        setCompleted(taskData.completed)
+        setFavourited(taskData.favourited)
+
+    }, [])
 
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
@@ -173,13 +192,43 @@ export function TaskCard({ label, image, link, title, description, type, rewards
                 <Button onClick={() => {window.open(link, "_blank")}} radius="md" style={{ flex: 1 }}>
                     Runescape Wiki
                 </Button>
-                <ActionIcon variant="default" radius="md" size={36}>
+                <ActionIcon onClick={clickComplete} variant="default" radius="md" size={36}>
                     <CircleCheck size={18} className={completed ? classes.completed : classes.uncompleted} />
                 </ActionIcon>
-                <ActionIcon variant="default" radius="md" size={36}>
+                <ActionIcon onClick={clickFavourite} variant="default" radius="md" size={36}>
                     <Heart size={18} className={favourited ? classes.favourited : classes.unfavourited} />
                 </ActionIcon>
             </Group>
         </Card>
     );
+
+    function clickFavourite() {
+        const json = localStorage.getItem(label)
+        if (json === null) return
+
+        const taskData = JSON.parse(json)
+        const newFavourite = taskData.favourited ? false : true
+        const newData = JSON.stringify({
+            favourited: newFavourite,
+            completed: taskData.completed
+        })
+
+        setFavourited(newFavourite)
+        localStorage.setItem(label, newData)
+    }
+
+    function clickComplete() {
+        const json = localStorage.getItem(label)
+        if (json === null) return
+
+        const taskData = JSON.parse(json)
+        const newCompleted = taskData.completed ? false : true
+        const newData = JSON.stringify({
+            favourited: taskData.favourited,
+            completed: newCompleted
+        })
+
+        setCompleted(newCompleted)
+        localStorage.setItem(label, newData)
+    }
 }
