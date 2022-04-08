@@ -67,10 +67,13 @@ interface TaskCardProps {
 export function TaskCard({ image, link, title, description, type, rewards }: TaskCardProps) {
     const { classes } = useStyles();
     const theme = useMantineTheme();
+    const XP_REWARD_COLOR = 'green'
+    const LOOT_REWARD_COLOR = 'yellow'
+    const REPUTATION_REWARD_COLOR = 'red'
 
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
-        color={'green'}
+        color={XP_REWARD_COLOR}
         key={value}
         >
             {value}
@@ -79,7 +82,7 @@ export function TaskCard({ image, link, title, description, type, rewards }: Tas
 
     const lootBadges = rewards.loot ? rewards.loot.map((value) => (
         <Badge
-        color={'yellow'}
+        color={LOOT_REWARD_COLOR}
         key={value}
         >
             {value}
@@ -88,7 +91,7 @@ export function TaskCard({ image, link, title, description, type, rewards }: Tas
 
     const reputationBadges = rewards.reputation ? rewards.reputation.map((value) => (
         <Badge
-        color={'red'}
+        color={REPUTATION_REWARD_COLOR}
         key={value}
         >
             {value}
