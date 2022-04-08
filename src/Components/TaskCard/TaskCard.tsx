@@ -26,14 +26,22 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.md,
     },
 
-    like: {
+    unfavourited: {
         color: theme.colors.red[6],
-        //fill: theme.colors.red[6]
     },
 
-    check: {
-        //fill: theme.colors.green[6],
+    favourited: {
+        color: theme.colors.red[6],
+        fill: theme.colors.red[6]
+    },
+
+    uncompleted: {
         color: theme.colors.green[6]
+    },
+
+    completed: {
+        fill: theme.colors.green[6],
+        color: theme.colors.dark[7]
     },
 
     label: {
@@ -166,10 +174,10 @@ export function TaskCard({ label, image, link, title, description, type, rewards
                     Runescape Wiki
                 </Button>
                 <ActionIcon variant="default" radius="md" size={36}>
-                    <CircleCheck size={18} className={classes.check} />
+                    <CircleCheck size={18} className={completed ? classes.completed : classes.uncompleted} />
                 </ActionIcon>
                 <ActionIcon variant="default" radius="md" size={36}>
-                    <Heart size={18} className={classes.like} />
+                    <Heart size={18} className={favourited ? classes.favourited : classes.unfavourited} />
                 </ActionIcon>
             </Group>
         </Card>
