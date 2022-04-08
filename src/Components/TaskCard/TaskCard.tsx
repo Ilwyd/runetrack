@@ -87,7 +87,8 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         if(json === null) {
             const newData = JSON.stringify({
                 favourited: false,
-                completed: false
+                completed: false,
+                completedDay: null
             })
 
             localStorage.setItem(label, newData)
@@ -99,6 +100,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         const taskData = JSON.parse(json)
         setCompleted(taskData.completed)
         setFavourited(taskData.favourited)
+
 
     }, [])
 
@@ -223,9 +225,11 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 
         const taskData = JSON.parse(json)
         const newCompleted = taskData.completed ? false : true
+        const newDate = taskData.completed ? null : new Date().toUTCString()
         const newData = JSON.stringify({
             favourited: taskData.favourited,
-            completed: newCompleted
+            completed: newCompleted,
+            completedDay: newDate
         })
 
         setCompleted(newCompleted)
