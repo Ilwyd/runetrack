@@ -7,7 +7,8 @@ export const data = {
             "link": "http://runescape.wiki/w/Divine_locations",
             "image": "",
             "rewards": {
-                "xp": ["Non-combat skills"]
+                "xp": ["Various non-combat skills"],
+                "loot": ["Various skilling materials"]
             }
         },
         {
