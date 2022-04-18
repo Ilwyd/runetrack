@@ -46,37 +46,44 @@ export const data = {
         {
             "label": "wilderness-warbands",
             "name": "Wilderness Warbands",
-            "description": "",
-            "link": "",
+            "description": "Wilderness Warbands is a dangerous members-only Distraction and Diversion, composed of heavily defended storage camps guarded by the followers of the different Gods, though they fight more for glory and not for the gods themselves. These camps are founded to gain an advantage for the followers of a particular God once their God returns. They will set up camp in the Wilderness every seven hours, one time at each of the three locations.",
+            "link": "https://runescape.wiki/w/Wilderness_Warbands",
             "image": "",
             "rewards": {
+                "xp": ["Farming", "Construction", "Herblore", "Mining", "Smithing", "Prayer", "Summoning", "Slayer"],
+                "loot": ["Wand of Treachery", "Coins"]
             }
         },
         {
             "label": "supply-run",
             "name": "Supply Run",
-            "description": "",
-            "link": "",
+            "description": "A supply run is a safe members-only PvP Distraction and Diversion on Mazcab where players attempt to bring goebie supplies from Kanatah to Otot. Supply runs occur every 12 hours on every world (approximately 00:05 and 12:05 game time). After 20 minutes, the supply run will end with PvP turning off and with any carried supplies disappearing. The adventurer may deliver up to 10 goebie supplies daily. ",
+            "link": "https://runescape.wiki/w/Supply_run",
             "image": "",
             "rewards": {
+                "xp": ["Agility", "Crafting", "Farming", "Herblore", "Hunter", "Woodcutting"]
             }
         },
         {
             "label": "shooting-star",
             "name": "Shooting Star",
-            "description": "",
-            "link": "",
+            "description": "Shooting Stars fall from the sky every two hours or so. They generally fall across all worlds within fifteen minutes of each other. If players reach the core of the star before the next star falls on that world, a Star sprite appears and gives rewards. ",
+            "link": "https://runescape.wiki/w/Shooting_Star",
             "image": "",
             "rewards": {
+                "xp": ["Mining"],
+                "loot": ["Cosmic Runes", "Astral Runes", "Gold Stone Spirits", "Coins"]
             }
         },
         {
             "label": "sinkhole",
             "name": "Sinkhole",
-            "description": "",
-            "link": "",
+            "description": "Sinkholes is a Members-only Dungeoneering Distraction and Diversion released on 5 February 2013. It takes place outside Daemonheim at 30 minutes past every hour.",
+            "link": "https://runescape.wiki/w/Sinkholes",
             "image": "",
             "rewards": {
+                "xp": ["Dungeoneering"],
+                "loot": ["Dungeoneering Tokens", "Hoardstalker outfit"]
             }
         },
         {
