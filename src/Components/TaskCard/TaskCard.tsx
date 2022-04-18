@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Check, CircleCheck, Heart } from 'tabler-icons-react';
+import { useEffect, useState } from 'react';
+import { CircleCheck, Heart } from 'tabler-icons-react';
 import {
     Card,
-    Image,
     Text,
     Group,
     Badge,
     Button,
     ActionIcon,
-    createStyles,
-    useMantineTheme,
-    Space,
+    createStyles
 } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -75,7 +72,6 @@ interface TaskCardProps {
 
 export function TaskCard({ label, image, link, title, description, type, rewards }: TaskCardProps) {
     const { classes } = useStyles();
-    const theme = useMantineTheme();
     const XP_REWARD_COLOR = 'green'
     const LOOT_REWARD_COLOR = 'yellow'
     const REPUTATION_REWARD_COLOR = 'red'
@@ -102,7 +98,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         setFavourited(taskData.favourited)
 
 
-    }, [])
+    }, [label])
 
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
