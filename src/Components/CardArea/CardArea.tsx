@@ -39,8 +39,19 @@ function CardArea({ activeTab }: CardAreaProps) {
 function checkSearch(searchText: string, taskValues: any) {
     const name = taskValues.name.toLowerCase().includes(searchText)
     const description = taskValues.description.toLowerCase().includes(searchText)
+    const loot = taskValues.rewards.loot ? taskValues.rewards.loot.find((element: string) => {
+        return element.toLowerCase().includes(searchText)
+    }): false
+
+    const reputation = taskValues.rewards.reputation ? taskValues.rewards.reputation.find((element: string) => {
+        return element.toLowerCase().includes(searchText)
+    }): false
+
+    const experience = taskValues.rewards.xp ? taskValues.rewards.xp.find((element: string) => {
+        return element.toLowerCase().includes(searchText)
+    }): false
     
-    if(name || description) {
+    if(name || description || loot || reputation || experience) {
         return true
     }
     return false
