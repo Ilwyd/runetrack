@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Tabs } from "../../Constants/Tabs";
 import CardArea from "../CardArea/CardArea";
 import Footer from "../Footer/Footer";
