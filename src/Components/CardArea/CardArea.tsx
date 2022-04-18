@@ -20,20 +20,30 @@ function CardArea({ activeTab }: CardAreaProps) {
     else {
         return (
             <Container>
-                <TextInput value={search} onChange={(event) => setSearch(event.target.value)}
+                <TextInput value={search} onChange={(event) => setSearch(event.target.value.toLowerCase())}
                     placeholder="Search for a task"
                     radius="md"
                 />
                 <br/>
                 <SimpleGrid cols={3}>
                     {data[activeTab].map((task) => {
-                        if(search === '' || task.name.toLowerCase().includes(search.toLowerCase()))
+                        if(search === '' || checkSearch(search, task))
                             return <TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" rewards={task.rewards} />
                     })}
                 </SimpleGrid>
             </Container>
         )
     }
+}
+
+function checkSearch(searchText: string, taskValues: any) {
+    const name = taskValues.name.toLowerCase().includes(searchText)
+    const description = taskValues.description.toLowerCase().includes(searchText)
+    
+    if(name || description) {
+        return true
+    }
+    return false
 }
 
 export default CardArea;
