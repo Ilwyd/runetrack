@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
     borderBottom: `1px solid ${
       theme.colorScheme === 'dark' ? 'transparent' : theme.colors.gray[2]
     }`,
-    marginBottom: 120,
+    marginBottom: theme.spacing.xl,
   },
 
   mainSection: {
