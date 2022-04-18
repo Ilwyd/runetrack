@@ -1,5 +1,4 @@
 import { Container, SimpleGrid, TextInput } from "@mantine/core";
-import { useForm } from "@mantine/hooks";
 import { useState } from "react";
 import { Tabs } from "../../Constants/Tabs";
 import { data } from "../../tasks";
@@ -12,7 +11,7 @@ interface CardAreaProps {
 function CardArea({ activeTab }: CardAreaProps) {
     const [search, setSearch] = useState('')
 
-    if (activeTab == Tabs.FAVORITES) {
+    if (activeTab === Tabs.FAVORITES) {
         return (
             <></>
         )
@@ -29,6 +28,7 @@ function CardArea({ activeTab }: CardAreaProps) {
                     {data[activeTab].map((task) => {
                         if(search === '' || checkSearch(search, task))
                             return <TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" rewards={task.rewards} />
+                        return null
                     })}
                 </SimpleGrid>
             </Container>
