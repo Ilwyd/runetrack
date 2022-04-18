@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
 function Footer() {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
     const dark = colorScheme === 'dark';
-    const { classes, theme, cx } = useStyles();
+    const { classes } = useStyles();
 
     return (
         <div className={classes.footer}>
