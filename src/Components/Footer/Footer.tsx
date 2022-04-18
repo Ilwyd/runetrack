@@ -1,5 +1,5 @@
 import { ActionIcon, Container, createStyles, Group, Image, useMantineColorScheme } from '@mantine/core';
-import { Sun, MoonStars, BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
+import { Sun, MoonStars } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
     footer: {
