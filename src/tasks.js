@@ -50,8 +50,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -61,8 +59,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -72,8 +68,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -83,8 +77,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -94,8 +86,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -105,8 +95,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -116,8 +104,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -127,8 +113,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -138,8 +122,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -149,8 +131,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -160,8 +140,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -171,8 +149,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -182,8 +158,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -193,8 +167,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -204,8 +176,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -215,8 +185,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -226,8 +194,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -237,8 +203,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -248,8 +212,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -259,8 +221,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -270,8 +230,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -281,8 +239,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -292,8 +248,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -303,8 +257,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -314,8 +266,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -325,8 +275,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -336,8 +284,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -347,8 +293,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -358,8 +302,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -369,8 +311,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -380,8 +320,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -391,8 +329,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -402,8 +338,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -413,8 +347,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -424,8 +356,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -435,8 +365,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -446,8 +374,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -457,8 +383,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -468,8 +392,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -479,8 +401,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -490,8 +410,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -501,8 +419,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -512,8 +428,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         },
         {
@@ -523,8 +437,6 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-                "xp": [],
-                "reputation": []
             }
         }
     ],
