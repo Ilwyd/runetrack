@@ -1,4 +1,4 @@
-import { Container, SimpleGrid, TextInput } from "@mantine/core";
+import { Container, Grid, TextInput } from "@mantine/core";
 import { useState } from "react";
 import { Tabs } from "../../Constants/Tabs";
 import { data } from "../../tasks";
@@ -24,13 +24,13 @@ function CardArea({ activeTab }: CardAreaProps) {
                     radius="md"
                 />
                 <br/>
-                <SimpleGrid cols={3}>
+                <Grid gutter={'lg'} grow align='flex-start'>
                     {data[activeTab].map((task) => {
                         if(search === '' || checkSearch(search, task))
-                            return <TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" rewards={task.rewards} />
+                            return <Grid.Col span={4}><TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" rewards={task.rewards} /></Grid.Col>
                         return null
                     })}
-                </SimpleGrid>
+                </Grid>
             </Container>
         )
     }
