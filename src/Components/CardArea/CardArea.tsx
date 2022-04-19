@@ -24,7 +24,7 @@ function CardArea({ activeTab }: CardAreaProps) {
                     radius="md"
                 />
                 <br/>
-                <Grid gutter={'lg'} grow align='flex-start'>
+                <Grid gutter={'lg'} grow align='center'>
                     {data[activeTab].map((task) => {
                         if(search === '' || checkSearch(search, task))
                             return <Grid.Col span={4}><TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type="Daily" rewards={task.rewards} /></Grid.Col>
