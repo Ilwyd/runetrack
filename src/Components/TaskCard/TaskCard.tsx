@@ -102,20 +102,28 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 
     }, [label])
 
+    //Check to see if the completetion status of the task card should be changed every second
+    //TODO: Currently only implemented for daily tasks and needs some cleanup
     useEffect(() => {
         counterRef.current += 1
         const timer = setTimeout(() => setCounter(counter + 1), 1000)
         
+        //Get the task data from localStorage
         const json = localStorage.getItem(label)
         if(json === null)
             return () => clearTimeout(timer)
 
         const taskData = JSON.parse(json)
+
+        //Prepare current and task completion dates for comparison
         const currDate = new Date()
         const taskDate = new Date(taskData.completedDay)
+
+        //Date parsing changes the date back to local time, so we have to use getUTC methods
         const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
         const taskDateString = '' + taskDate.getUTCDate() + taskDate.getUTCMonth() + taskDate.getUTCFullYear()
 
+        //If the completion UTC date is different from the current, reset the completion status to false, if not already
         if(currDateString !== taskDateString && taskData.completed === true) {
             console.log("Changing " + label + " to incomplete. Dates: \n" + currDateString + "\n" + taskDateString)
             const newCompleted = false
@@ -134,6 +142,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 
     }, [counter, label])
 
+    //Below we build the badges for each type of reward based on what's in the task file
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
         color={XP_REWARD_COLOR}
@@ -234,6 +243,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         </Card>
     );
 
+    //On clicking the favourite button on a card, update the data in localStorage
     function clickFavourite() {
         const json = localStorage.getItem(label)
         if (json === null) return
@@ -249,6 +259,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         localStorage.setItem(label, newData)
     }
 
+    //On clicking the complete button on a card, update the data in localStorage
     function clickComplete() {
         const json = localStorage.getItem(label)
         if (json === null) return
