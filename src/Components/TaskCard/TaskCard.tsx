@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CircleCheck, Heart } from 'tabler-icons-react';
 import {
     Card,
@@ -77,6 +77,8 @@ export function TaskCard({ label, image, link, title, description, type, rewards
     const REPUTATION_REWARD_COLOR = 'red'
     const [completed, setCompleted] = useState(Boolean);
     const [favourited, setFavourited] = useState(Boolean);
+    const [counter, setCounter] = useState(0);
+    const counterRef = useRef(0);
 
     useEffect(() => {
         const json = localStorage.getItem(label);
@@ -99,6 +101,38 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 
 
     }, [label])
+
+    useEffect(() => {
+        counterRef.current += 1
+        const timer = setTimeout(() => setCounter(counter + 1), 1000)
+        
+        const json = localStorage.getItem(label)
+        if(json === null)
+            return () => clearTimeout(timer)
+
+        const taskData = JSON.parse(json)
+        const currDate = new Date()
+        const taskDate = new Date(taskData.completedDay)
+        const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
+        const taskDateString = '' + taskDate.getUTCDate() + taskDate.getUTCMonth() + taskDate.getUTCFullYear()
+
+        if(currDateString !== taskDateString && taskData.completed === true) {
+            console.log("Changing " + label + " to incomplete. Dates: \n" + currDateString + "\n" + taskDateString)
+            const newCompleted = false
+            const newDate = null
+            const newData = JSON.stringify({
+                favourited: taskData.favourited,
+                completed: newCompleted,
+                completedDay: newDate
+            })
+
+            setCompleted(newCompleted)
+            localStorage.setItem(label, newData)
+        }
+
+        return () => clearTimeout(timer)
+
+    }, [counter, label])
 
     const xpBadges = rewards.xp ? rewards.xp.map((value) => (
         <Badge
