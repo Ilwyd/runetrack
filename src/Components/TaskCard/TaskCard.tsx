@@ -264,7 +264,8 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         setCompleted(newCompleted)
         localStorage.setItem(label, newData)
 	}
-
+	
+	//Used to reset daily task completion status.
 	function resetDaily(currDate: Date, taskDate: Date, taskData: any) {
 		//Date parsing changes the date back to local time, so we have to use getUTC methods
         const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
@@ -285,4 +286,9 @@ export function TaskCard({ label, image, link, title, description, type, rewards
             localStorage.setItem(label, newData)
         }
 	}
+
+	function resetWeekly() {}
+	function resetMonthly() {}
+	function resetOther() {}
+
 }
