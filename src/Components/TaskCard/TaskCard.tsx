@@ -119,24 +119,12 @@ export function TaskCard({ label, image, link, title, description, type, rewards
         const currDate = new Date()
         const taskDate = new Date(taskData.completedDay)
 
-        //Date parsing changes the date back to local time, so we have to use getUTC methods
-        const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
-        const taskDateString = '' + taskDate.getUTCDate() + taskDate.getUTCMonth() + taskDate.getUTCFullYear()
-
-        //If the completion UTC date is different from the current, reset the completion status to false, if not already
-        if(currDateString !== taskDateString && taskData.completed === true) {
-            console.log("Changing " + label + " to incomplete. Dates: \n" + currDateString + "\n" + taskDateString)
-            const newCompleted = false
-            const newDate = null
-            const newData = JSON.stringify({
-                favourited: taskData.favourited,
-                completed: newCompleted,
-                completedDay: newDate
-            })
-
-            setCompleted(newCompleted)
-            localStorage.setItem(label, newData)
-        }
+		resetDaily(currDate, taskDate, taskData);
+		
+		//TODO:Implement the below functions
+		//resetWeekly()
+		//resetMonthly()
+		//resetOther()
 
         return () => clearTimeout(timer)
 
@@ -275,5 +263,26 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 
         setCompleted(newCompleted)
         localStorage.setItem(label, newData)
-    }
+	}
+
+	function resetDaily(currDate: Date, taskDate: Date, taskData: any) {
+		//Date parsing changes the date back to local time, so we have to use getUTC methods
+        const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
+        const taskDateString = '' + taskDate.getUTCDate() + taskDate.getUTCMonth() + taskDate.getUTCFullYear()
+
+        //If the completion UTC date is different from the current, reset the completion status to false, if not already
+        if(currDateString !== taskDateString && taskData.completed === true) {
+            console.log("Changing " + label + " to incomplete. Dates: \n" + currDateString + "\n" + taskDateString)
+            const newCompleted = false
+            const newDate = null
+            const newData = JSON.stringify({
+                favourited: taskData.favourited,
+                completed: newCompleted,
+                completedDay: newDate
+            })
+
+            setCompleted(newCompleted)
+            localStorage.setItem(label, newData)
+        }
+	}
 }
