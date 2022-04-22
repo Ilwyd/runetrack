@@ -292,7 +292,7 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 	function resetOther() {}
 
 	function getWeek(date: Date) {
-		
+		//https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
 	}
 
 }
