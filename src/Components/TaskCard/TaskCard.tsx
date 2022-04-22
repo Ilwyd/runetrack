@@ -291,4 +291,8 @@ export function TaskCard({ label, image, link, title, description, type, rewards
 	function resetMonthly() {}
 	function resetOther() {}
 
+	function getWeek(date: Date) {
+		
+	}
+
 }
