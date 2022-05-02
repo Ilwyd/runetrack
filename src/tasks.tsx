@@ -459,6 +459,18 @@ export const data = {
 			}
 		}
 	],
-    "Monthlies": [],
+	"Monthlies": [
+		{
+			"label": "giant-oyster",
+			"name": "Giant Oyster",
+			"description": "The Giant Oyster is a monthly Distraction and Diversion within the sunken Tutorial Island that is accessible upon completion of Beneath Cursed Tides. Players can collect and catch items to feed to the Giant Oyster, receiving Fishing and Farming experience from doing so. Once fed, the Giant Oyster will close its mouth, preventing further feedings. The following month after being fed, the Giant Oyster can be checked, opening to reveal treasure inside for the player to collect.",
+			"link": "https://runescape.wiki/w/Giant_Oyster",
+			"image": "",
+			"rewards": {
+				"xp": ["Farming", "Fishing"],
+				"loot": ["Easy to Elite Treasure Trail Rewards"]
+			}
+		}
+	],
     "Others": []
 }
