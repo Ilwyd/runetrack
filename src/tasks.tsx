@@ -447,7 +447,18 @@ export const data = {
             }
         }
     ],
-    "Weeklies": [],
+	"Weeklies": [
+		{
+			"label": "pigs-and-bacon",
+			"name": "Pigs and Bacon",
+			"description": "You may collect raw bacon / pig familiar pouches from Eli Bacon on a weekly basis.",
+			"link": "https://runescape.wiki/w/Eli#Weekly_reward",
+			"image": "",
+			"rewards": {
+				"loot": ["Raw Bacon", "Pack Pig Pouch", "Prayer Pig Pouch", "War Pig Pouch", "Spirit Pig Scrolls"]
+			}
+		}
+	],
     "Monthlies": [],
     "Others": []
 }
