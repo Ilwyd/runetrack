@@ -1,3 +1,5 @@
+import { Accordion, Text } from "@mantine/core";
+
 interface Reward {
     xp?: Array<string>;
     loot?: Array<string>;
@@ -15,7 +17,11 @@ interface TaskAccordionProps {
 }
 
 function TaskAccordion({ label, image, link, title, description, type, rewards }: TaskAccordionProps) {
-
+    return (
+        <Accordion.Item label={title}>
+            <Text size="sm" mt="xs">{description}</Text>
+        </Accordion.Item>
+    )
 }
 
 export default TaskAccordion;
