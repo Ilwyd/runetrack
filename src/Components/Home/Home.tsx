@@ -13,10 +13,9 @@ function Home() {
     }
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+        <div>
             <Header tabs={tabs} tabChange={tabChange} />
             <CardArea activeTab={activeTab} />
-            <div style={{flex: 1}}></div>
             <Footer />
         </div>
     )
