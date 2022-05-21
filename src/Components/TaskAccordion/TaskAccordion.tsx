@@ -1,5 +1,5 @@
 import { Accordion, ActionIcon, Button, createStyles, Group, Text } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CircleCheck, Heart } from "tabler-icons-react";
 
 interface Reward {
@@ -13,6 +13,7 @@ interface TaskAccordionProps {
     image: string;
     link: string;
     description: string;
+    type: string;
     rewards: Reward;
 }
 
@@ -64,10 +65,12 @@ const useStyles = createStyles((theme) => ({
     }
 }));
 
-export function TaskAccordion({ label, image, link, description, rewards }: TaskAccordionProps) {
+export function TaskAccordion({ label, image, link, description, type, rewards }: TaskAccordionProps) {
     const {classes} = useStyles();
     const [completed, setCompleted] = useState(Boolean);
     const [favourited, setFavourited] = useState(Boolean);
+    const [counter, setCounter] = useState(0);
+    const counterRef = useRef(0);
 
     //On first load check the fave / complete state from local storage
     useEffect(() => {
@@ -91,6 +94,35 @@ export function TaskAccordion({ label, image, link, description, rewards }: Task
 
 
     }, [label])
+
+    //Check to see if the completetion status of the task card should be changed every second
+    //TODO: Currently only implemented for daily tasks and needs some cleanup
+    useEffect(() => {
+        counterRef.current += 1
+        const timer = setTimeout(() => setCounter(counter + 1), 1000)
+        
+        //Get the task data from localStorage
+        const json = localStorage.getItem(label)
+        if(json === null)
+            return () => clearTimeout(timer)
+
+        const taskData = JSON.parse(json)
+
+        //Prepare current and task completion dates for comparison
+        const currDate = new Date()
+        const taskDate = new Date(taskData.completedDay)
+
+        if(type === 'daily')
+    		resetDaily(currDate, taskDate, taskData);
+		
+		//TODO:Implement the below functions
+		//resetWeekly()
+		//resetMonthly()
+		//resetOther()
+
+        return () => clearTimeout(timer)
+
+    }, [counter, label])
 
     return (
         <>
@@ -147,6 +179,36 @@ export function TaskAccordion({ label, image, link, description, rewards }: Task
 
         setCompleted(newCompleted)
         localStorage.setItem(label, newData)
+	}
+
+    //Used to reset daily task completion status.
+	function resetDaily(currDate: Date, taskDate: Date, taskData: any) {
+		//Date parsing changes the date back to local time, so we have to use getUTC methods
+        const currDateString = '' + currDate.getUTCDate() + currDate.getUTCMonth() + currDate.getUTCFullYear()
+        const taskDateString = '' + taskDate.getUTCDate() + taskDate.getUTCMonth() + taskDate.getUTCFullYear()
+
+        //If the completion UTC date is different from the current, reset the completion status to false, if not already
+        if(currDateString !== taskDateString && taskData.completed === true) {
+            console.log("Changing " + label + " to incomplete. Dates: \n" + currDateString + "\n" + taskDateString)
+            const newCompleted = false
+            const newDate = null
+            const newData = JSON.stringify({
+                favourited: taskData.favourited,
+                completed: newCompleted,
+                completedDay: newDate
+            })
+
+            setCompleted(newCompleted)
+            localStorage.setItem(label, newData)
+        }
+	}
+
+	function resetWeekly() {}
+	function resetMonthly() {}
+	function resetOther() {}
+
+	function getWeek(date: Date) {
+		//https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
 	}
 }
 
