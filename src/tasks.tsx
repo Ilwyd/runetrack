@@ -1,5 +1,6 @@
 export const data = {
     "tasks": [
+        //Dailies
         {
             "label": "divine-locations",
             "name": "Divine Locations",
@@ -525,7 +526,7 @@ export const data = {
 			"image": "",
 			"rewards": {
 				"xp": ["Farming", "Fishing"],
-				"loot": ["Easy to Elite Treasure Trail Rewards"]
+				"loot": ["Easy to Elite Treasure Trail / Clue Rewards"]
 			},
             "type": "monthly"
 		}
