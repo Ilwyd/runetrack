@@ -25,7 +25,7 @@ function CardArea({ activeTab }: CardAreaProps) {
                     radius="md"
                 />
                 <br/>
-                <Accordion>
+                <Accordion multiple>
                     {data.tasks.map((task) => {
                         if((search === '' || checkSearch(search, task)) && task.type === activeTab.toLowerCase()) {
                             return (
