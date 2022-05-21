@@ -1,7 +1,7 @@
 export enum Tabs {
-    DAILIES = "Dailies",
-    WEEKLIES = "Weeklies",
-    MONTHLIES = "Monthlies",
-    OTHERS = "Others",
+    DAILIES = "Daily",
+    WEEKLIES = "Weekly",
+    MONTHLIES = "Monthly",
+    OTHERS = "Other",
     FAVORITES = "Favorites"
 }
