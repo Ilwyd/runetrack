@@ -98,10 +98,12 @@ export const data = {
         {
             "label": "evil-trees",
             "name": "Evil Trees",
-            "description": "",
-            "link": "",
+            "description": "Evil trees are Distractions and Diversions available to both members and free-to-play players. Two separate evil trees may be interacted with daily, nurturing or chopping will yield xp which counts as interaction, inspecting does not. Nurturing and chopping the same evil tree will count as one daily limit.",
+            "link": "https://runescape.wiki/w/Evil_Tree",
             "image": "",
             "rewards": {
+                "xp": ["Woodcutting", "Firemaking", "Farming"],
+                "loot": ["Logs", "Coins", "Bird's Nests", "Key Halves", "Tree Seeds", "Clue Scrolls"]
             },
             "type": "daily"
         },
