@@ -1,5 +1,5 @@
 import { Accordion, ActionIcon, Button, createStyles, Group, Text } from "@mantine/core";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CircleCheck, Heart } from "tabler-icons-react";
 
 interface Reward {
@@ -68,6 +68,29 @@ export function TaskAccordion({ label, image, link, description, rewards }: Task
     const {classes} = useStyles();
     const [completed, setCompleted] = useState(Boolean);
     const [favourited, setFavourited] = useState(Boolean);
+
+    //On first load check the fave / complete state from local storage
+    useEffect(() => {
+        const json = localStorage.getItem(label);
+        if(json === null) {
+            const newData = JSON.stringify({
+                favourited: false,
+                completed: false,
+                completedDay: null
+            })
+
+            localStorage.setItem(label, newData)
+            setCompleted(false)
+            setFavourited(false)
+            return
+        }
+
+        const taskData = JSON.parse(json)
+        setCompleted(taskData.completed)
+        setFavourited(taskData.favourited)
+
+
+    }, [label])
 
     return (
         <>
