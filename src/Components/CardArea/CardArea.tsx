@@ -1,7 +1,8 @@
-import { Container, Grid, TextInput } from "@mantine/core";
+import { Accordion, Container, Grid, TextInput } from "@mantine/core";
 import { useState } from "react";
 import { Tabs } from "../../Constants/Tabs";
 import { data } from "../../tasks";
+import { TaskAccordion } from "../TaskAccordion/TaskAccordion";
 import { TaskCard } from "../TaskCard/TaskCard";
 
 interface CardAreaProps {
@@ -24,13 +25,18 @@ function CardArea({ activeTab }: CardAreaProps) {
                     radius="md"
                 />
                 <br/>
-                <Grid gutter={'lg'} grow align='center'>
+                <Accordion>
                     {data[activeTab].map((task) => {
-                        if(search === '' || checkSearch(search, task))
-                            return <Grid.Col span={4}><TaskCard label={task.label} link={task.link} image={task.image} description={task.description} title={task.name} type={activeTab.replace("ies", "y")} rewards={task.rewards} /></Grid.Col>
+                        if(search === '' || checkSearch(search, task)) {
+                            return (
+                                <Accordion.Item label={task.name} iconPosition='right'>
+                                    <TaskAccordion label={task.label} link={task.link} image={task.image} description={task.description} type={activeTab.replace("ies", "y")} rewards={task.rewards} />
+                                </Accordion.Item>
+                            )
+                        }
                         return null
                     })}
-                </Grid>
+                </Accordion>
             </Container>
         )
     }
