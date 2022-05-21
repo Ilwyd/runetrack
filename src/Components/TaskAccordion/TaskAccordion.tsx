@@ -10,18 +10,13 @@ interface TaskAccordionProps {
     label: string;
     image: string;
     link: string;
-    title: string;
     description: string;
     type: string;
     rewards: Reward;
 }
 
-function TaskAccordion({ label, image, link, title, description, type, rewards }: TaskAccordionProps) {
+export function TaskAccordion({ label, image, link, description, type, rewards }: TaskAccordionProps) {
     return (
-        <Accordion.Item label={title}>
-            <Text size="sm" mt="xs">{description}</Text>
-        </Accordion.Item>
+        <Text size="sm" mt="xs">{description}</Text>
     )
 }
-
-export default TaskAccordion;
