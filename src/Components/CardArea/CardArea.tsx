@@ -1,4 +1,4 @@
-import { Accordion, Badge, Container, createStyles, Grid, TextInput } from "@mantine/core";
+import { Accordion, Badge, Container, TextInput } from "@mantine/core";
 import { useState } from "react";
 import { Tabs } from "../../Constants/Tabs";
 import { data } from "../../tasks";
@@ -9,15 +9,8 @@ interface CardAreaProps {
     activeTab: Tabs;
 }
 
-const useStyles = createStyles((theme) => ({
-    accordionItem: {
-        width: '100%'
-    }
-}))
-
 function CardArea({ activeTab }: CardAreaProps) {
     const [search, setSearch] = useState('')
-    const { classes } = useStyles();
 
     if (activeTab === Tabs.FAVORITES) {
         return (
@@ -38,7 +31,6 @@ function CardArea({ activeTab }: CardAreaProps) {
                             return (
                                 <Accordion.Item
                                     key={task.label} 
-                                    className={classes.accordionItem} 
                                     label={
                                         <TaskAccordionLabel 
                                             title={task.name} 
