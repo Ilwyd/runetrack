@@ -179,7 +179,7 @@ export const data = {
         {
             "label": "death-task",
             "name": "Death Task",
-            "description": "It involves the player helping Death harvest the souls of various boss monsters, as, in Death's words, there is an imbalance in the harmony of life and death — specifically, there is too much life. Death tasks players with "reaping" various boss monsters in special assignments, which reward Slayer experience and reaper points that can be spent for various items and effects, including hydrix gems, a new title, and a set of cosmetic gear. ",
+            "description": "It involves the player helping Death harvest the souls of various boss monsters, as, in Death's words, there is an imbalance in the harmony of life and death — specifically, there is too much life. Death tasks players with \"reaping\" various boss monsters in special assignments, which reward Slayer experience and reaper points that can be spent for various items and effects, including hydrix gems, a new title, and a set of cosmetic gear. ",
             "link": "https://runescape.wiki/w/Soul_Reaper",
             "image": "",
             "rewards": {
@@ -191,10 +191,12 @@ export const data = {
         {
             "label": "bork",
             "name": "Bork",
-            "description": "",
-            "link": "",
+            "description": "Bork is a boss which can be defeated daily after completion of The Hunt for Surok miniquest.",
+            "link": "https://runescape.wiki/w/Bork",
             "image": "",
             "rewards": {
+                "xp": ["Slayer"],
+                "loot": ["Crimson Charms", "Blue Charms", "Green Charms", "Coins", "Uncut gems"]
             },
             "type": "daily"
         },
