@@ -11,11 +11,10 @@ interface TaskAccordionProps {
     image: string;
     link: string;
     description: string;
-    type: string;
     rewards: Reward;
 }
 
-export function TaskAccordion({ label, image, link, description, type, rewards }: TaskAccordionProps) {
+export function TaskAccordion({ label, image, link, description, rewards }: TaskAccordionProps) {
     return (
         <Text size="sm" mt="xs">{description}</Text>
     )
