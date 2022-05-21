@@ -179,10 +179,12 @@ export const data = {
         {
             "label": "death-task",
             "name": "Death Task",
-            "description": "",
-            "link": "",
+            "description": "It involves the player helping Death harvest the souls of various boss monsters, as, in Death's words, there is an imbalance in the harmony of life and death — specifically, there is too much life. Death tasks players with "reaping" various boss monsters in special assignments, which reward Slayer experience and reaper points that can be spent for various items and effects, including hydrix gems, a new title, and a set of cosmetic gear. ",
+            "link": "https://runescape.wiki/w/Soul_Reaper",
             "image": "",
             "rewards": {
+                "xp": ["Slayer", "Combat"],
+                "loot": ["Reaper Points", "Death notes", "Incomplete Hydrix", "Aura Refresh", "Death's deal", "Titles", "Vanquisher Gear", "Tiny Death", "Death Scythe", "Mahjarrat Aura", "Loot Beams", "Ring of Death (o)"]
             },
             "type": "daily"
         },
