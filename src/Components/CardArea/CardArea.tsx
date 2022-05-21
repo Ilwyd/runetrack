@@ -34,7 +34,7 @@ function CardArea({ activeTab }: CardAreaProps) {
                                     label={
                                         <TaskAccordionLabel 
                                             title={task.name} 
-                                            type={activeTab.replace("ies", "y")} />
+                                            type={task.type} />
                                         } 
                                     iconPosition='right'
                                 >
