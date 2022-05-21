@@ -168,10 +168,11 @@ export const data = {
         {
             "label": "jack-of-trades",
             "name": "Jack of Trades",
-            "description": "",
-            "link": "",
+            "description": "The Jack of Trades aura grants experience in any skill after gaining experience in 10, 15, 20 or 25 skills (depending on aura tier).",
+            "link": "https://runescape.wiki/w/Jack_of_trades_aura",
             "image": "",
             "rewards": {
+                "xp": ["Various skills"]
             },
             "type": "daily"
         },
