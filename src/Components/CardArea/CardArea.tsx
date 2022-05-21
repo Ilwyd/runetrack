@@ -26,8 +26,8 @@ function CardArea({ activeTab }: CardAreaProps) {
                 />
                 <br/>
                 <Accordion>
-                    {data[activeTab].map((task) => {
-                        if(search === '' || checkSearch(search, task)) {
+                    {data.tasks.map((task) => {
+                        if((search === '' || checkSearch(search, task)) && task.type === activeTab.toLowerCase()) {
                             return (
                                 <Accordion.Item
                                     key={task.label} 
