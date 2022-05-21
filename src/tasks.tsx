@@ -122,10 +122,12 @@ export const data = {
         {
             "label": "guthixian-cache",
             "name": "Guthixian Cache",
-            "description": "",
-            "link": "",
+            "description": "Guthixian Cache requires the player to hop into an energy rift, found at any of the wisp colonies (except the pale wisp and cursed wisp colonies) which appear for 10 minutes hourly, to collect memories of Guthix. While it appears every hour, the extra benefits for Divination only occur once every 3 hours. It can also be entered via The Archivist in the Hall of Memories. ",
+            "link": "https://runescape.wiki/w/Guthixian_Cache",
             "image": "",
             "rewards": {
+                "xp": ["Divination"],
+                "loot": ["Diviner's Outfit"]
             },
             "type": "daily"
         },
