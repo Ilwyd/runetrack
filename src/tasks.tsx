@@ -144,10 +144,11 @@ export const data = {
         {
             "label": "serenity-posts",
             "name": "Serenity Posts",
-            "description": "",
-            "link": "",
+            "description": "Serenity posts are an Agility training method located in the Hefin Clan district of Prifddinas. Access to this activity requires level 75 Agility and completion of the quest, Plague's End. While not an official Distraction and Diversion, this training activity can only be completed once per day, and progress is reset daily at 00:00 UTC. ",
+            "link": "https://runescape.wiki/w/Serenity_posts",
             "image": "",
             "rewards": {
+                "xp": ["Agility"]
             },
             "type": "daily"
         },
