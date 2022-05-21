@@ -55,7 +55,7 @@ interface HeaderTabs {
 export default function Header({ tabs, tabChange }: HeaderTabs) {
   const { classes, theme, cx } = useStyles();
 
-  const items = tabs.map((tab) => <Tabs.Tab label={tab} tabKey={tab} />);
+  const items = tabs.map((tab) => <Tabs.Tab key={tab} label={tab} tabKey={tab} />);
 
   return (
     <div className={classes.header}>
