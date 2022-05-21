@@ -57,6 +57,10 @@ const useStyles = createStyles((theme) => ({
         textTransform: 'uppercase',
         fontSize: theme.fontSizes.xs,
         fontWeight: 700
+    },
+    
+    wiki: {
+        maxWidth: '25%'
     }
 }));
 
@@ -67,17 +71,24 @@ export function TaskAccordion({ label, image, link, description, rewards }: Task
 
     return (
         <>
-        <Text size="sm" mt="xs">{description}</Text>
-        <Group mt="xs">
-                <Button onClick={() => {window.open(link, "_blank")}} radius="md" style={{ flex: 1 }}>
+            <Text size="sm" mt="xs">{description}</Text>
+            <Group mt="xs" position='apart'>
+                <Button 
+                    onClick={() => {window.open(link, "_blank")}} 
+                    radius="md" 
+                    style={{ flex: 1 }}
+                    className={classes.wiki}
+                >
                     Runescape Wiki
                 </Button>
-                <ActionIcon onClick={clickComplete} variant="default" radius="md" size={36}>
-                    <CircleCheck size={18} className={completed ? classes.completed : classes.uncompleted} />
-                </ActionIcon>
-                <ActionIcon onClick={clickFavourite} variant="default" radius="md" size={36}>
-                    <Heart size={18} className={favourited ? classes.favourited : classes.unfavourited} />
-                </ActionIcon>
+                <Group>
+                    <ActionIcon onClick={clickComplete} variant="default" radius="md" size={36}>
+                        <CircleCheck size={18} className={completed ? classes.completed : classes.uncompleted} />
+                    </ActionIcon>
+                    <ActionIcon onClick={clickFavourite} variant="default" radius="md" size={36}>
+                        <Heart size={18} className={favourited ? classes.favourited : classes.unfavourited} />
+                    </ActionIcon>
+                </Group>
             </Group>
         </>
     )
