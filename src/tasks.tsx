@@ -110,10 +110,12 @@ export const data = {
         {
             "label": "big-chinchompa",
             "name": "Big Chinchompa",
-            "description": "",
-            "link": "",
+            "description": "Big Chinchompa is a members-only Hunter Distraction and Diversion (D&D) that can be done twice daily. Big Chinchompa allows players to enter the lairs of massive plutonial chinchompas, catch native soporith moths, and feed them to the chinchompas in order to put them to sleep.",
+            "link": "https://runescape.wiki/w/Big_Chinchompa",
             "image": "",
             "rewards": {
+                "xp": ["Hunter"],
+                "loot": ["Private Hunter Area Quota Tickets", "Swamp Toads", "Swamp tar", "Flax"]
             },
             "type": "daily"
         },
