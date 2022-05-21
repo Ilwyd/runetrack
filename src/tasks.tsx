@@ -134,10 +134,11 @@ export const data = {
         {
             "label": "runesphere",
             "name": "Runesphere",
-            "description": "",
-            "link": "",
+            "description": "The runesphere is an object and D&D that appears in the Runespan and can be siphoned for runes, rune dust, and Runecrafting experience. Siphoning the runesphere requires rune essence, and yields runes corresponding to the type of rune layer the sphere is on.",
+            "link": "https://runescape.wiki/w/Runesphere",
             "image": "",
             "rewards": {
+                "xp": ["Runecrafting"]
             },
             "type": "daily"
         },
