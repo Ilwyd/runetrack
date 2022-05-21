@@ -156,10 +156,12 @@ export const data = {
         {
             "label": "crystal-tree-blossom",
             "name": "Crystal Tree Blossom",
-            "description": "",
-            "link": "",
+            "description": "A crystal tree blossom is a fruit that can be harvested from a crystal tree grown from a crystal acorn planted in the crystal tree patch in the Tower of Voices in Prifddinas, requiring level 94 Farming. ",
+            "link": "https://runescape.wiki/w/Crystal_tree_blossom",
             "image": "",
             "rewards": {
+                "xp": ["Farming"],
+                "loot": ["Crystal Tree Blossom"]
             },
             "type": "daily"
         },
