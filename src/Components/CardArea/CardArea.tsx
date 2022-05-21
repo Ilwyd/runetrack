@@ -4,7 +4,6 @@ import { Tabs } from "../../Constants/Tabs";
 import { data } from "../../tasks";
 import { TaskAccordion } from "../TaskAccordion/TaskAccordion";
 import TaskAccordionLabel from "../TaskAccordion/TaskAccordionLabel";
-import { TaskCard } from "../TaskCard/TaskCard";
 
 interface CardAreaProps {
     activeTab: Tabs;
