@@ -1,5 +1,5 @@
 export const data = {
-    "Dailies": [
+    "tasks": [
         {
             "label": "divine-locations",
             "name": "Divine Locations",
@@ -9,7 +9,8 @@ export const data = {
             "rewards": {
                 "xp": ["Fishing", "Woodcutting", "Farming", "Mining", "Hunter", "Divination"],
                 "loot": ["Fish", "Logs", "Herbs", "Ores", "General Hunter loot", "Signs", "Portents", "Energies"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "soul-obelisks",
@@ -20,7 +21,8 @@ export const data = {
             "rewards": {
                 "xp": ["Runecrafting", "Prayer"],
                 "reputation": ["Menaphos"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "skilling-helms",
@@ -30,7 +32,8 @@ export const data = {
             "image": "",
             "rewards": {
                 "loot": ["Soft clay", "Coal", "Vials of Water", "Chronicle fragments", "Bird's nests", "Dragon bones", "Spirit shards", "Pie shells"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "nemi-forest",
@@ -41,7 +44,8 @@ export const data = {
             "rewards": {
                 "xp": ["Dungeoneering", "Farming", "Mining", "Prayer"],
                 "reputation": ["Goebie"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "wilderness-warbands",
@@ -52,7 +56,8 @@ export const data = {
             "rewards": {
                 "xp": ["Farming", "Construction", "Herblore", "Mining", "Smithing", "Prayer", "Summoning", "Slayer"],
                 "loot": ["Wand of Treachery", "Coins"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "supply-run",
@@ -62,7 +67,8 @@ export const data = {
             "image": "",
             "rewards": {
                 "xp": ["Agility", "Crafting", "Farming", "Herblore", "Hunter", "Woodcutting"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "shooting-star",
@@ -73,7 +79,8 @@ export const data = {
             "rewards": {
                 "xp": ["Mining"],
                 "loot": ["Cosmic Runes", "Astral Runes", "Gold Stone Spirits", "Coins"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "sinkhole",
@@ -84,7 +91,8 @@ export const data = {
             "rewards": {
                 "xp": ["Dungeoneering"],
                 "loot": ["Dungeoneering Tokens", "Hoardstalker outfit"]
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "evil-trees",
@@ -93,7 +101,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "big-chinchompa",
@@ -102,7 +111,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "guthixian-cache",
@@ -111,7 +121,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "runesphere",
@@ -120,7 +131,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "serenity-posts",
@@ -129,7 +141,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "crystal-tree-blossom",
@@ -138,7 +151,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "jack-of-trades",
@@ -147,7 +161,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "death-task",
@@ -156,7 +171,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "bork",
@@ -165,7 +181,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "phoenix",
@@ -174,7 +191,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "red-sandstone",
@@ -183,7 +201,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "crystal-flecked-sandstone",
@@ -192,7 +211,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "gorajo-card",
@@ -201,7 +221,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "book-of-char",
@@ -210,7 +231,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "yak-hide",
@@ -219,7 +241,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "fresh-meat-shop",
@@ -228,7 +251,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "arheins-shop",
@@ -237,7 +261,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "potato-cacti",
@@ -246,7 +271,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "pineapples",
@@ -255,7 +281,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "flax",
@@ -264,7 +291,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "buckets-of-sand",
@@ -273,7 +301,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "pure-essence",
@@ -282,7 +311,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "bag-of-lost-items",
@@ -291,7 +321,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "explorers-ring",
@@ -300,7 +331,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "molten-glass",
@@ -309,7 +341,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "rune-goldberg-machine",
@@ -318,7 +351,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "wicked-hood",
@@ -327,7 +361,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "planks",
@@ -336,7 +371,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "food-hamper",
@@ -345,7 +381,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "motherlode-maw",
@@ -354,7 +391,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "motherlode-shards",
@@ -363,7 +401,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "broad-arrowheads",
@@ -372,7 +411,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "rune-run",
@@ -381,7 +421,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "logs",
@@ -390,7 +431,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "trinks-tasks",
@@ -399,7 +441,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "rosie",
@@ -408,7 +451,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "arc-contracts",
@@ -417,7 +461,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "claimed-island",
@@ -426,7 +471,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "bounties",
@@ -435,7 +481,8 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
+            },
+            "type": "daily"
         },
         {
             "label": "treasure-hunter-keys",
@@ -444,11 +491,16 @@ export const data = {
             "link": "",
             "image": "",
             "rewards": {
-            }
-        }
-    ],
-	"Weeklies": [
-		{
+            },
+            "type": "daily"
+        },
+
+
+
+
+
+        //Weeklies
+        {
 			"label": "pigs-and-bacon",
 			"name": "Pigs and Bacon",
 			"description": "You may collect raw bacon / pig familiar pouches from Eli Bacon on a weekly basis.",
@@ -456,11 +508,16 @@ export const data = {
 			"image": "",
 			"rewards": {
 				"loot": ["Raw Bacon", "Pack Pig Pouch", "Prayer Pig Pouch", "War Pig Pouch", "Spirit Pig Scrolls"]
-			}
-		}
-	],
-	"Monthlies": [
-		{
+			},
+            "type": "weekly"
+		},
+
+
+
+
+
+        //Monthlies
+        {
 			"label": "giant-oyster",
 			"name": "Giant Oyster",
 			"description": "The Giant Oyster is a monthly Distraction and Diversion within the sunken Tutorial Island that is accessible upon completion of Beneath Cursed Tides. Players can collect and catch items to feed to the Giant Oyster, receiving Fishing and Farming experience from doing so. Once fed, the Giant Oyster will close its mouth, preventing further feedings. The following month after being fed, the Giant Oyster can be checked, opening to reveal treasure inside for the player to collect.",
@@ -469,8 +526,8 @@ export const data = {
 			"rewards": {
 				"xp": ["Farming", "Fishing"],
 				"loot": ["Easy to Elite Treasure Trail Rewards"]
-			}
+			},
+            "type": "monthly"
 		}
-	],
-    "Others": []
+    ]
 }
