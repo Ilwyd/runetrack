@@ -38,7 +38,14 @@ function CardArea({ activeTab }: CardAreaProps) {
                                         } 
                                     iconPosition='right'
                                 >
-                                    <TaskAccordion label={task.label} link={task.link} image={task.image} description={task.description} rewards={task.rewards} />
+                                    <TaskAccordion 
+                                        label={task.label} 
+                                        link={task.link} 
+                                        image={task.image} 
+                                        description={task.description} 
+                                        type={task.type}
+                                        rewards={task.rewards} 
+                                    />
                                 </Accordion.Item>
                             )
                         }
