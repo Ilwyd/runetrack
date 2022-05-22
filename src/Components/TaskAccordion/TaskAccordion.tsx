@@ -114,11 +114,13 @@ export function TaskAccordion({ label, image, link, description, type, rewards }
 
         if(type === 'daily')
     		resetDaily(currDate, taskDate, taskData);
-		
-		//TODO:Implement the below functions
-		//resetWeekly()
-		//resetMonthly()
-		//resetOther()
+        //TODO:Implement the below functions
+        else if(type === 'weekly')
+		    resetWeekly()
+        else if(type === 'monthly')
+		    resetMonthly()
+        else
+    		resetOther()
 
         return () => clearTimeout(timer)
 
